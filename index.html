@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="لوحة الخطة التشغيلية ١٤٤٨ هـ لأولياء أمور طلاب مدرسة عبد الرحمن الداخل الثانوية">
+<link rel="icon" href="logo.png">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>لوحة الخطة التشغيلية ١٤٤٨</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@500;700;800&display=swap">
+<style>
+/* الفكرة: «النقطة = برنامج» — لغة نقاط شعار الوزارة المتدرجة من الأزرق إلى الأخضر تمثّل برامج الخطة في كل قسم.
+   التخطيط: ترويسة رسمية ← غلاف كحلي بمقياس الإنجاز وحقل نقاط ← رحلة الأسابيع ← اختيار صف الابن ← المجالات ← البرامج ← شاركنا ← تذييل مائي */
+:root{
+  --bg:#F3F8F7; --surface:#FFFFFF; --ink:#1F3644; --ink-2:#536978; --line:#B7C8D6; --line-2:#E2EBEE;
+  --navy:#1F3644; --navy-2:#2C404B; --on-navy:#FFFFFF; --on-navy-2:#B9CFD6;
+  --mint:#9EF0C8; --mint-2:#CCF7E4; --sky:#DDEAF2; --teal:#52A08E; --teal-2:#7FC3B6; --green:#2E7D63;
+  --moe-blue:#3B84B6; --moe-green:#4CB077; --dot-empty:#D5E2E8; --glass:rgba(255,255,255,.07);
+  --grad:linear-gradient(90deg,var(--moe-blue),var(--moe-green));
+  --display:"Noto Kufi Arabic","Sakkal Majalla","Segoe UI",sans-serif;
+  --body:"IBM Plex Sans Arabic","Segoe UI","Tahoma",sans-serif;
+  --r:18px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B161C; --surface:#12212A; --ink:#E4EFEC; --ink-2:#9DB4BE; --line:#2C4553; --line-2:#1C313C;
+  --navy:#132630; --navy-2:#1A303C; --mint-2:#14382F; --sky:#16303D; --green:#8BE0BC; --teal-2:#3F8274;
+  --dot-empty:#33505F; --glass:rgba(255,255,255,.05); color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0B161C; --surface:#12212A; --ink:#E4EFEC; --ink-2:#9DB4BE; --line:#2C4553; --line-2:#1C313C;
+  --navy:#132630; --navy-2:#1A303C; --mint-2:#14382F; --sky:#16303D; --green:#8BE0BC; --teal-2:#3F8274;
+  --dot-empty:#33505F; --glass:rgba(255,255,255,.05); color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.75;direction:rtl}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.45}
+.num{font-variant-numeric:tabular-nums}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:8px}
+.eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.02em;color:var(--teal)}
+
+/* ── الترويسة الرسمية ── */
+.gov{background:var(--surface)}
+.gov .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding-block:10px}
+.gov p{margin:0;font-family:var(--display);font-weight:700;font-size:13px;line-height:1.75;color:var(--ink)}
+.gov .end{text-align:left}
+.gov .logo{height:58px;width:auto;display:block}
+.gov-line{height:4px;background:var(--grad)}
+
+/* ── الغلاف ── */
+.hero{background:var(--navy);color:var(--on-navy);position:relative;overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px;align-items:center;padding-block:44px 40px}
+.hero .eyebrow{color:var(--mint)}
+.hero h1{font-size:clamp(30px,4.6vw,50px);font-weight:800;margin-top:6px}
+.hero h1 span{background:linear-gradient(90deg,#7CC3F0,var(--mint));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{color:var(--on-navy-2);font-size:17px;max-width:46ch;margin:10px 0 22px}
+.stamp{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px 12px;background:var(--glass);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:7px 16px;font-size:13.5px;color:var(--on-navy-2)}
+.stamp b{color:var(--on-navy)}
+.stamp .live{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(158,240,200,.18)}
+.caps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
+.cap{background:var(--glass);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:14px 16px;min-width:0}
+.cap .v{font-family:var(--display);font-size:28px;font-weight:800;line-height:1.3}
+.cap .v small{font-size:14px;font-weight:600;color:var(--on-navy-2)}
+.cap .l{font-size:13px;color:var(--on-navy-2)}
+.principal{display:inline-flex;align-items:center;gap:12px;margin-top:18px;padding:8px 20px;border-radius:999px;background:linear-gradient(90deg,rgba(59,132,182,.22),rgba(76,176,119,.22));border:1px solid rgba(255,255,255,.14)}
+.principal .pi{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:#fff;box-shadow:0 0 0 2px rgba(158,240,200,.35)}
+.principal .pi svg{width:34px;height:34px;display:block}
+.principal small{display:block;font-size:12px;color:var(--on-navy-2);line-height:1.4}
+.principal b{display:block;font-family:var(--display);font-size:15.5px;line-height:1.5}
+.gauge{justify-self:center;position:relative;width:min(300px,100%);aspect-ratio:1;max-width:100%}
+.gauge svg{width:100%;height:100%;display:block}
+.gauge .trk{fill:none;stroke:rgba(255,255,255,.10);stroke-width:16}
+.gauge .val{fill:none;stroke:url(#g-moe);stroke-width:16;stroke-linecap:round;animation:fill-ring 1.4s cubic-bezier(.2,.8,.2,1)}
+@keyframes fill-ring{from{stroke-dashoffset:var(--c)}}
+.gauge .tick{fill:rgba(255,255,255,.28)}
+.gauge .mid{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.gauge .pct{font-family:var(--display);font-size:clamp(46px,7vw,66px);font-weight:800;line-height:1.1}
+.gauge .pl{font-size:14px;color:var(--on-navy-2)}
+.gauge .ps{font-size:12.5px;color:var(--mint);margin-top:4px}
+
+/* ── عام ── */
+section{padding-block:34px 8px}
+.sec-h{display:flex;align-items:flex-end;justify-content:space-between;gap:8px 24px;flex-wrap:wrap;margin-bottom:18px}
+.sec-h h2{font-size:clamp(22px,2.6vw,28px);font-weight:800;color:var(--ink)}
+.sec-h p{margin:0;color:var(--ink-2);font-size:14.5px;max-width:58ch}
+.key{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--ink-2)}
+.key span{display:inline-flex;align-items:center;gap:7px}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;flex:none}
+.dot.on{background:var(--grad)}
+.dot.miss{background:transparent;border:2px solid var(--teal-2)}
+.dot.off{background:var(--dot-empty)}
+
+/* ── رحلة الأسابيع ── */
+.journey{background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r);padding:22px 18px 16px}
+.j-scroll{overflow-x:auto;padding-bottom:4px}
+.j-grid{display:grid;grid-template-columns:repeat(13,minmax(48px,1fr));min-width:680px;position:relative}
+.j-grid::before{content:"";position:absolute;right:24px;left:24px;bottom:46px;height:3px;border-radius:3px;background:var(--line-2)}
+.j-grid .prog-line{position:absolute;right:24px;bottom:46px;height:3px;border-radius:3px;background:var(--grad)}
+.wk{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;background:none;border:0;padding:8px 0 0;cursor:pointer;border-radius:14px}
+.wk:hover{background:var(--bg)}
+.wk.sel{background:var(--sky)}
+.wk .stack{display:flex;flex-direction:column-reverse;gap:4px;height:214px;justify-content:flex-start}
+.wk .stack .dot{width:11px;height:11px;animation:pop .6s cubic-bezier(.3,1.6,.5,1)}
+.wk .n{position:relative;z-index:1;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:700;background:var(--surface);border:2px solid var(--line);color:var(--ink-2)}
+.wk.past .n{border-color:var(--teal);color:var(--ink)}
+.wk.now .n{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+.wk .here{font-size:11.5px;font-weight:700;line-height:1.9;background:var(--ink);color:var(--surface);border-radius:999px;padding:0 9px;white-space:nowrap;margin-top:-2px}
+.wk.now{background:color-mix(in srgb,var(--teal) 10%,transparent)}
+.wk:not(.now) .n{margin-bottom:32px}
+.wk .cnt{font-size:12px;color:var(--ink-2);margin-top:-6px}
+@keyframes pop{from{transform:scale(.2);opacity:.2}}
+.j-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.weekpick{margin-top:14px}
+.weekpick h3{font-size:17px;font-weight:700;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line-2);background:var(--bg);border-radius:999px;padding:6px 14px 6px 12px;font-size:13.5px;cursor:pointer;display:inline-flex;gap:8px;align-items:center;transition:border-color .2s,transform .2s}
+.chip:hover{border-color:var(--teal);transform:translateY(-1px)}
+.chip .dot{width:10px;height:10px}
+
+/* ── اختيار الصف ── */
+.picker{background:linear-gradient(135deg,var(--mint-2),var(--sky));border-radius:var(--r);padding:20px;display:grid;gap:14px}
+.picker h2{font-size:22px;font-weight:800;color:var(--ink)}
+.grades{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.grade{background:var(--surface);border:2px solid transparent;border-radius:16px;padding:12px 14px;cursor:pointer;text-align:right;display:flex;align-items:center;gap:12px;min-width:0;transition:border-color .2s,transform .2s}
+.grade:hover{transform:translateY(-2px)}
+.grade .g{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:19px;background:var(--bg);color:var(--ink)}
+.grade b{display:block;font-size:15px}
+.grade small{display:block;color:var(--ink-2);font-size:12.5px;line-height:1.5}
+.grade[aria-pressed="true"]{border-color:var(--teal)}
+.grade[aria-pressed="true"] .g{background:var(--grad);color:#fff}
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.seg{display:flex;flex-wrap:wrap;gap:4px;background:var(--surface);border-radius:12px;padding:4px}
+.seg button{border:0;background:none;padding:6px 14px;border-radius:9px;cursor:pointer;font-size:14px;color:var(--ink-2)}
+.seg button[aria-pressed="true"]{background:var(--navy-2);color:var(--on-navy)}
+.search{flex:1 1 220px;min-width:0;position:relative}
+.search input{width:100%;border:0;background:var(--surface);border-radius:12px;padding:9px 40px 9px 14px}
+.search svg{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:18px;height:18px;stroke:var(--ink-2);fill:none;stroke-width:2}
+
+/* ── المجالات ── */
+.domains{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.dom{background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r);overflow:hidden;min-width:0;display:flex;flex-direction:column}
+.dom-h{padding:16px 16px 12px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;border-bottom:1px solid var(--line-2);position:relative}
+.dom-h::before{content:"";position:absolute;top:0;right:0;left:0;height:4px;background:var(--grad)}
+.dom-h h3{font-size:17px;font-weight:800;color:var(--ink)}
+.dom-h .eyebrow{display:block}
+.dom-h .big{font-family:var(--display);font-size:30px;font-weight:800;line-height:1.2;color:var(--green)}
+.std{display:grid;gap:6px;width:100%;text-align:right;background:none;border:0;border-top:1px solid var(--line-2);padding:11px 16px;cursor:pointer}
+.std:first-of-type{border-top:0}
+.std:hover{background:var(--bg)}
+.std[aria-pressed="true"]{background:var(--sky)}
+.std .row{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:14px;font-weight:600}
+.std .row small{color:var(--ink-2);font-weight:500;white-space:nowrap}
+.std .dots{display:flex;gap:5px}
+.std .dots .dot{width:12px;height:12px}
+
+/* ── قياس الأثر ── */
+.impact{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.ic-card{background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:6px;min-width:0;position:relative;overflow:hidden}
+.ic-card::after{content:"";position:absolute;inset-inline-end:-18px;top:-18px;width:86px;height:86px;opacity:.5;
+  background:radial-gradient(circle,var(--teal-2) 2.2px,transparent 2.6px) 0 0/14px 14px;-webkit-mask:radial-gradient(circle at 70% 30%,#000 10%,transparent 68%);mask:radial-gradient(circle at 70% 30%,#000 10%,transparent 68%)}
+.ic-card .area{font-size:12.5px;font-weight:700;color:var(--green)}
+.ic-card .big{font-family:var(--display);font-weight:800;font-size:38px;line-height:1.25;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;width:max-content}
+.ic-card p{margin:0;font-size:14px;color:var(--ink)}
+.ic-card .ev{margin-top:auto;padding-top:8px;font-size:12px;color:var(--ink-2);border-top:1px dashed var(--line-2)}
+.ic-card.feat{grid-column:span 2;background:var(--navy);border-color:transparent;color:var(--on-navy)}
+.ic-card.feat .area{color:var(--mint)}
+.ic-card.feat .big{font-size:56px;background:linear-gradient(90deg,#7CC3F0,var(--mint));-webkit-background-clip:text;background-clip:text}
+.ic-card.feat p{color:var(--on-navy);font-size:15.5px;max-width:44ch}
+.ic-card.feat .ev{color:var(--on-navy-2);border-color:rgba(255,255,255,.15)}
+.ic-card.feat::after{width:180px;height:180px;opacity:.35}
+.targets{margin-top:14px;background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r);padding:20px 22px}
+.t-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}
+.t-head h3{font-size:18px;font-weight:800}
+.tk{display:inline-block;width:3px;height:14px;border-radius:2px;background:var(--ink)}
+.t-rows{display:grid;gap:16px}
+.t-row{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr) auto;gap:6px 18px;align-items:center;background:none;border:0;padding:0;text-align:right;cursor:pointer}
+.t-row b{font-size:14.5px;display:block}
+.t-row small{font-size:12.5px;color:var(--ink-2);display:block}
+.t-track{position:relative;height:14px;border-radius:99px;background:var(--dot-empty)}
+.t-track .f{position:absolute;inset-block:0;inset-inline-start:0;border-radius:99px;background:var(--grad)}
+.t-track .tg{position:absolute;top:-5px;bottom:-5px;width:3px;border-radius:2px;background:var(--ink);transform:translateX(50%)}
+.t-track .tg span{position:absolute;bottom:calc(100% + 2px);left:50%;transform:translateX(-50%);font-size:11px;color:var(--ink-2);white-space:nowrap}
+.t-val{font-family:var(--display);font-weight:800;font-size:20px;color:var(--green);white-space:nowrap}
+.t-val small{display:inline;font-family:var(--body);font-weight:500;font-size:12px;color:var(--ink-2)}
+.t-miles{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.mile{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line-2);background:var(--bg);border-radius:999px;padding:6px 14px 6px 8px;font-size:13.5px;cursor:pointer}
+.mile .ok{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--grad);color:#fff;font-size:12px}
+.mile small{color:var(--ink-2)}
+.pcard.voice{background:linear-gradient(135deg,var(--mint),#BFEFDA);color:#1F3644;border-color:transparent;cursor:default}
+.pcard.voice p{color:#2C404B}
+.pcard.voice .ic{background:#1F3644}
+.pcard.voice .when{color:#2E7D63}
+@media (max-width:1020px){.impact{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){
+  .impact{grid-template-columns:minmax(0,1fr)}.ic-card.feat{grid-column:auto}.ic-card.feat .big{font-size:46px}
+  .t-row{grid-template-columns:minmax(0,1fr) auto}.t-track{grid-column:1/-1;grid-row:2}
+}
+
+/* ── البرامج ── */
+.active-filter{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;font-size:14px;color:var(--ink-2)}
+.active-filter button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 12px;cursor:pointer;font-size:13px;color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:10px;text-align:right;cursor:pointer;min-width:0;position:relative;overflow:hidden;transition:border-color .25s,transform .25s,box-shadow .25s}
+.card:hover{border-color:var(--teal-2);transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(31,54,68,.45)}
+.card .top{display:flex;gap:12px;align-items:center}
+.badge{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:16px;color:var(--ink);background:var(--bg);border:2px solid var(--line-2)}
+.card.done .badge{background:var(--grad);color:#fff;border-color:transparent}
+.card h3{font-size:16.5px;font-weight:700;color:var(--ink)}
+.card p{margin:0;color:var(--ink-2);font-size:14px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card .foot{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:auto;padding-top:4px}
+.tag{font-size:12.5px;background:var(--bg);border-radius:8px;padding:2px 9px;color:var(--ink-2)}
+.pill{font-size:12.5px;font-weight:700;border-radius:999px;padding:3px 11px;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.pill.done{background:var(--mint-2);color:var(--green)}
+.pill.follow{background:var(--sky);color:var(--ink)}
+.pill.soon{background:transparent;color:var(--ink-2);border:1px dashed var(--line)}
+.pill.soon::before{background:transparent;border:1.5px solid currentColor}
+.more{margin-inline-start:auto;font-size:13px;font-weight:600;color:var(--teal)}
+.empty{grid-column:1/-1;padding:34px;text-align:center;color:var(--ink-2);background:var(--surface);border-radius:var(--r);border:1px dashed var(--line)}
+
+/* ── شاركنا ── */
+.parents-band{background:var(--navy);color:var(--on-navy);margin-top:40px;position:relative;overflow:hidden}
+.parents-band canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.parents-band .wrap{position:relative;padding-block:38px}
+.parents-band .sec-h h2{color:var(--on-navy)}
+.parents-band .sec-h p{color:var(--on-navy-2)}
+.parents{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.pcard{background:var(--glass);border:1px solid rgba(255,255,255,.14);color:var(--on-navy);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:8px;cursor:pointer;text-align:right;min-width:0;transition:background .2s,transform .2s}
+.pcard:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.pcard .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--grad)}
+.pcard .ic svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pcard h3{font-size:15.5px;font-weight:700}
+.pcard p{margin:0;font-size:13.5px;color:var(--on-navy-2)}
+.pcard .when{font-size:12.5px;color:var(--mint);font-weight:600;margin-top:auto}
+
+/* ── نافذة البرنامج ── */
+dialog{border:0;border-radius:22px;padding:0;max-width:min(700px,calc(100vw - 32px));width:100%;background:var(--surface);color:var(--ink);box-shadow:0 30px 80px -30px rgba(0,0,0,.6)}
+dialog::backdrop{background:rgba(11,22,28,.6);backdrop-filter:blur(3px)}
+.dlg-h{background:var(--navy);color:var(--on-navy);padding:20px 22px;display:flex;justify-content:space-between;gap:14px;align-items:center;position:relative}
+.dlg-h::after{content:"";position:absolute;inset:auto 0 0 0;height:4px;background:var(--grad)}
+.dlg-h .badge{background:var(--grad);color:#fff;border:0;width:52px;height:52px;font-size:18px}
+.dlg-h .t{display:flex;gap:14px;align-items:center;min-width:0}
+.dlg-h h3{font-size:21px;font-weight:800}
+.dlg-h .id{font-size:13px;color:var(--on-navy-2)}
+.x{background:rgba(255,255,255,.12);border:0;color:var(--on-navy);width:38px;height:38px;border-radius:12px;cursor:pointer;font-size:22px;flex:none}
+.dlg-b{padding:20px 22px 24px;display:grid;gap:16px}
+.dlg-b > p{margin:0;font-size:15.5px}
+.kv{display:grid;grid-template-columns:150px 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.kv div{padding:9px 13px;border-top:1px solid var(--line);font-size:14px;min-width:0}
+.kv div:nth-child(-n+2){border-top:0}
+.kv .k{background:var(--mint);color:#1F3644;font-weight:700}
+.tl-t{font-weight:700;font-size:14.5px}
+.tl{display:grid;grid-template-columns:repeat(13,1fr);gap:4px;margin-top:6px}
+.tl i{aspect-ratio:1;max-width:22px;border-radius:50%;background:var(--dot-empty);justify-self:center;width:100%}
+.tl i.on{background:transparent;border:2px solid var(--teal-2)}
+.tl i.on.past{background:var(--grad);border:0}
+.tl i.now{outline:2px solid var(--ink);outline-offset:2px}
+.tl-l{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-2);margin-top:4px}
+
+/* ── التذييل ── */
+.site-foot{padding-top:40px}
+.fcard{position:relative;overflow:hidden;border-radius:24px;background:linear-gradient(135deg,var(--mint-2),var(--sky));display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.2fr);align-items:center}
+.fcard canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.fc{position:relative;padding:26px 28px;min-width:0}
+.fc + .fc{border-inline-start:1px solid color-mix(in srgb,var(--teal) 30%,transparent)}
+.fc-school{display:flex;align-items:center;gap:16px}
+.fc-school img{height:62px;width:auto;flex:none}
+.fc-school b{display:block;font-family:var(--display);font-size:17px;line-height:1.6;color:var(--ink)}
+.fc-school span{display:block;font-size:13.5px;color:var(--ink-2)}
+.fc .lbl{display:block;font-size:12.5px;font-weight:600;color:var(--green);letter-spacing:.02em}
+.fc-principal{text-align:center}
+.fc-principal .name{display:inline-block;font-family:var(--display);font-weight:800;font-size:clamp(22px,2.4vw,27px);line-height:1.5;color:var(--ink);padding-bottom:6px;background:var(--grad) no-repeat bottom center/56px 3px}
+.fc-principal .role{display:block;font-size:13px;color:var(--ink-2);margin-top:6px}
+.fc-data p{margin:4px 0 0;font-size:13.5px;line-height:1.85;color:var(--ink-2)}
+.fbar{margin-top:22px;background:var(--navy);color:var(--on-navy-2);font-size:13px;position:relative}
+.fbar::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad)}
+.fbar .wrap{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 14px;padding-block:13px 12px}
+.fbar i{width:5px;height:5px;border-radius:50%;background:var(--mint);opacity:.7}
+@media (max-width:860px){
+  .fcard{grid-template-columns:minmax(0,1fr)}
+  .fc + .fc{border-inline-start:0;border-top:1px solid color-mix(in srgb,var(--teal) 30%,transparent)}
+  .fc{padding:20px}
+}
+
+@media (max-width:1020px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr)}
+  .gauge{width:min(260px,100%);grid-row:1}
+  .domains{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .parents{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .grades{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:620px){
+  .gov .wrap{grid-template-columns:1fr auto}.gov .end{display:none}.gov .logo{height:48px}
+  .hero .wrap{padding-block:30px}
+  .caps{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.cap{padding:10px}.cap .v{font-size:21px}
+  .domains,.grid{grid-template-columns:minmax(0,1fr)}
+  .parents{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kv{grid-template-columns:108px 1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<header class="gov">
+  <div class="wrap">
+    <p>المملكة العربية السعودية<br>وزارة التعليم</p>
+    <img class="logo" src="logo.png" alt="شعار وزارة التعليم">
+    <p class="end">الإدارة العامة للتعليم بمحافظة جدة<br>مدرسة عبد الرحمن الداخل الثانوية</p>
+  </div>
+  <div class="gov-line"></div>
+</header>
+
+<main>
+  <div class="hero">
+    <canvas id="hero-dots" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">الخطة التشغيلية · العام الدراسي ١٤٤٨ هـ</span>
+        <h1>خطة مدرستنا <span>بين يديك</span></h1>
+        <p class="lede">تابع برامج ابنك وأنشطته في مدرسة عبد الرحمن الداخل الثانوية، ونسب إنجازها أسبوعاً بأسبوع.</p>
+        <div class="stamp" id="stamp"><span class="live"></span><span>آخر تحديث</span><b>—</b></div>
+        <div class="caps" id="caps"></div>
+        <div class="principal"><span><small>مدير المدرسة</small><b>أ . خالد الرايقي</b></span></div>
+      </div>
+      <div class="gauge" id="gauge" role="img" aria-label="نسبة الإنجاز"></div>
+    </div>
+  </div>
+
+  <section class="wrap" aria-labelledby="h-weeks">
+    <div class="sec-h">
+      <div><span class="eyebrow">كل نقطة برنامج</span><h2 id="h-weeks">رحلة الفصل الدراسي الأول</h2></div>
+      <div class="key">
+        <span><i class="dot on"></i>نُفِّذ ووُثِّق</span>
+        <span><i class="dot miss"></i>قيد المتابعة</span>
+        <span><i class="dot off"></i>قادم</span>
+      </div>
+    </div>
+    <div class="journey">
+      <div class="j-scroll"><div class="j-grid" id="weeks" role="group" aria-label="أسابيع الفصل الأول"></div></div>
+      <div class="weekpick" id="weekpick"></div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="h-pick">
+    <div class="picker">
+      <h2 id="h-pick">ابنك في أي صف؟</h2>
+      <div class="grades" id="grades" role="group" aria-labelledby="h-pick">
+        <button class="grade" data-g="0" aria-pressed="true"><span class="g">✦</span><span><b>كل الصفوف</b><small>جميع برامج الخطة</small></span></button>
+        <button class="grade" data-g="1" aria-pressed="false"><span class="g">١</span><span><b>الصف الأول</b><small>السنة الأولى المشتركة</small></span></button>
+        <button class="grade" data-g="2" aria-pressed="false"><span class="g">٢</span><span><b>الصف الثاني</b><small>نظام المسارات</small></span></button>
+        <button class="grade" data-g="3" aria-pressed="false"><span class="g">٣</span><span><b>الصف الثالث</b><small>سنة التخرج</small></span></button>
+      </div>
+      <div class="tools">
+        <div class="seg" id="seg-aud" role="group" aria-label="نوع البرامج">
+          <button data-v="all" aria-pressed="true">الكل</button>
+          <button data-v="students" aria-pressed="false">للطلاب</button>
+          <button data-v="parents" aria-pressed="false">لأولياء الأمور</button>
+          <button data-v="school" aria-pressed="false">المدرسة والمعلمون</button>
+        </div>
+        <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" type="search" placeholder="ابحث باسم البرنامج أو هدفه" aria-label="بحث في البرامج"></label>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="h-dom">
+    <div class="sec-h">
+      <div><span class="eyebrow">الدليل الإجرائي للتقويم المدرسي الخارجي</span><h2 id="h-dom">مجالات التقويم المدرسي</h2></div>
+      <p>أربعة مجالات وأحد عشر معياراً. اختر معياراً لترى برامجه.</p>
+    </div>
+    <div class="domains" id="domains"></div>
+  </section>
+
+  <section class="wrap" aria-labelledby="h-impact" id="impact-sec" hidden>
+    <div class="sec-h">
+      <div><span class="eyebrow">قياس الأثر</span><h2 id="h-impact">ما الذي تغيّر فعلاً؟</h2></div>
+      <p id="impact-asof"></p>
+    </div>
+    <div class="impact" id="impact"></div>
+    <div class="targets">
+      <div class="t-head"><h3>مؤشرات بلغت مستهدفها</h3>
+        <span class="key"><span><i class="tk"></i>المستهدف</span><span><i class="dot on"></i>المتحقق</span></span></div>
+      <div class="t-rows" id="t-rows"></div>
+      <div class="t-miles" id="t-miles"></div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="h-prog">
+    <div class="sec-h">
+      <div><span class="eyebrow" id="count"></span><h2 id="h-prog">برامج الخطة</h2></div>
+      <p>اضغط على أي برنامج لترى هدفه ومستهدفيه ومواعيده ومؤشر إنجازه.</p>
+    </div>
+    <div class="active-filter" id="active"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <div class="parents-band">
+    <canvas id="band-dots" aria-hidden="true"></canvas>
+    <section class="wrap" aria-labelledby="h-par">
+      <div class="sec-h">
+        <div><span class="eyebrow" style="color:var(--mint)">شراكة الأسرة والمدرسة</span><h2 id="h-par">شراكتكم تصنع الفرق</h2></div>
+        <p>برامج أُعدّت لتعزيز التواصل بين الأسرة والمدرسة، وحضوركم يثريها.</p>
+      </div>
+      <div class="parents" id="parents"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="fcard">
+      <canvas id="foot-dots" aria-hidden="true"></canvas>
+      <div class="fc fc-school">
+        <img src="logo.png" alt="شعار وزارة التعليم">
+        <div><b>مدرسة عبد الرحمن الداخل الثانوية</b><span>الإدارة العامة للتعليم بمحافظة جدة</span></div>
+      </div>
+      <div class="fc fc-principal">
+        <span class="lbl">مدير المدرسة</span>
+        <b class="name">أ . خالد الرايقي</b>
+        <span class="role">رئيس لجنة التميّز المدرسي</span>
+      </div>
+      <div class="fc fc-data">
+        <span class="lbl">عن بيانات اللوحة</span>
+        <p id="source">تُحدَّث هذه اللوحة أسبوعياً بعد مراجعة شواهد الخطة التشغيلية.</p>
+      </div>
+    </div>
+  </div>
+  <div class="fbar"><div class="wrap"><span>لوحة الخطة التشغيلية</span><i></i><span>العام الدراسي ١٤٤٨ هـ</span><i></i><span>وزارة التعليم</span></div></div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <div class="dlg-h">
+    <div class="t"><span class="badge num" id="dlg-n"></span><div><div class="id" id="dlg-id"></div><h3 id="dlg-title"></h3></div></div>
+    <button class="x" id="dlg-x" aria-label="إغلاق">×</button>
+  </div>
+  <div class="dlg-b" id="dlg-b"></div>
+</dialog>
+
+<script>
+(() => {
+const AR = '٠١٢٣٤٥٦٧٨٩';
+const ar = v => String(v).replace(/[0-9]/g, d => AR[d]);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const $ = id => document.getElementById(id);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let PLAN, ST, IMP = null, state = {grade:0, aud:'all', q:'', std:null, week:null};
+
+/* حقل نقاط على هيئة شعار الوزارة: شبكة نقاط متدرجة تتقعّر في الوسط */
+function dotField(cv, opts){
+  const dpr = Math.min(devicePixelRatio || 1, 2), r = cv.getBoundingClientRect();
+  if (!r.width) return;
+  cv.width = r.width*dpr; cv.height = r.height*dpr;
+  const c = cv.getContext('2d'); c.scale(dpr, dpr);
+  const gap = opts.gap, cols = Math.ceil(r.width/gap)+1, rows = Math.ceil(r.height/gap)+1;
+  for (let i = 0; i < cols; i++) for (let j = 0; j < rows; j++){
+    const x = i*gap, y = j*gap, u = x/r.width;
+    const v = Math.abs(u - opts.cx)*2;                 // بعد النقطة عن محور الـV
+    const depth = 1 - Math.min(1, (y/r.height) / (0.35 + v*0.9));
+    if (depth <= 0) continue;
+    const rad = opts.max * depth * (0.45 + v*0.55);
+    if (rad < .6) continue;
+    const col = [59 + (76-59)*u, 132 + (176-132)*u, 182 + (119-182)*u];
+    c.fillStyle = `rgba(${col.map(Math.round).join(',')},${opts.alpha*depth})`;
+    c.beginPath(); c.arc(x, y, rad, 0, 7); c.fill();
+  }
+}
+function paintDots(){
+  dotField($('hero-dots'), {gap:30, max:7, alpha:.5, cx:.3});
+  dotField($('band-dots'), {gap:34, max:6, alpha:.32, cx:.75});
+  dotField($('foot-dots'), {gap:26, max:5, alpha:.18, cx:.12});
+}
+
+function liveWeek(){
+  const w = Math.floor((Date.now() - new Date(PLAN.week1 + 'T00:00:00+03:00')) / (7*864e5)) + 1;
+  return (w >= 1 && w <= PLAN.weeksPerSemester) ? w : null;
+}
+const isDoc = id => ST.documented.includes(id);
+function status(p){
+  if (isDoc(p.id)) return {k:'done', t:'نُفِّذ وموثَّق'};
+  const s1 = p.weeks.filter(w => w[0] === ST.semester);
+  if (s1.some(w => w[1] <= ST.week) || p.weeks.some(w => w[0] < ST.semester))
+    return {k:'follow', t: s1.some(w => w[1] >= ST.week) ? 'قيد التنفيذ' : 'قيد المتابعة'};
+  const next = p.weeks.find(w => w[0] > ST.semester || (w[0] === ST.semester && w[1] > ST.week));
+  if (next) return {k:'soon', t: next[0] === ST.semester ? 'يبدأ الأسبوع ' + ar(next[1]) : 'في الفصل الثاني'};
+  return {k:'soon', t:'لم يحن موعده'};
+}
+const dotClass = (p, past) => isDoc(p.id) ? 'on' : past ? 'miss' : 'off';
+const AUD = {students:'للطلاب', parents:'لأولياء الأمور', school:'المدرسة والمعلمون'};
+const GR = {1:'الأول', 2:'الثاني', 3:'الثالث'};
+const gradesTxt = g => g.length === 3 ? 'كل الصفوف' : 'الصف ' + g.map(x => GR[x]).join(' و');
+
+function renderHero(){
+  const lw = liveWeek() ?? ST.week, docN = ST.documented.length;
+  $('stamp').innerHTML = `<span class="live"></span><span>آخر تحديث</span><b>${esc(ST.updatedHijri)}</b><span>· بيانات حتى الأسبوع ${ar(ST.week)}</span>`;
+  $('caps').innerHTML = `
+    <div class="cap"><div class="v num">${ar(docN)} <small>/ ${ar(PLAN.programs.length)}</small></div><div class="l">برنامجاً نُفِّذ ووُثِّق</div></div>
+    <div class="cap"><div class="v num">${ar(ST.evidenceTotal)}</div><div class="l">شاهداً موثَّقاً</div></div>
+    <div class="cap"><div class="v num">${ar(lw)} <small>/ ${ar(PLAN.weeksPerSemester)}</small></div><div class="l">الأسبوع الدراسي</div></div>`;
+  const R = 120, C = 2*Math.PI*R, off = C*(1 - ST.completion/100);
+  let ticks = '';
+  for (let i = 0; i < 60; i++){ const a = i/60*2*Math.PI - Math.PI/2; ticks += `<circle class="tick" cx="${150+142*Math.cos(a)}" cy="${150+142*Math.sin(a)}" r="${i%5?1:2}"/>`; }
+  $('gauge').setAttribute('aria-label', `نسبة الإنجاز ${ar(ST.completion)}٪`);
+  $('gauge').innerHTML = `<svg viewBox="0 0 300 300"><defs><linearGradient id="g-moe" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4CB077"/><stop offset="1" stop-color="#3B84B6"/></linearGradient></defs>
+      ${ticks}<circle class="trk" cx="150" cy="150" r="${R}"/>
+      <circle class="val" cx="150" cy="150" r="${R}" stroke-dasharray="${C}" stroke-dashoffset="${off}" style="--c:${C}" transform="rotate(-90 150 150)"/></svg>
+    <div class="mid"><div class="pct num">${ar(ST.completion)}٪</div><div class="pl">نسبة الإنجاز</div><div class="ps num">${ar(ST.receivedEvidence)} شاهداً من ${ar(ST.dueEvidence)} مستحقاً</div></div>`;
+}
+
+const weekProgs = w => PLAN.programs.filter(p => p.weeks.some(x => x[0] === 1 && x[1] === w));
+function renderWeeks(){
+  const lw = liveWeek(), N = PLAN.weeksPerSemester;
+  let h = '';
+  for (let w = 1; w <= N; w++){
+    const ps = weekProgs(w).sort((a,b) => isDoc(b.id) - isDoc(a.id)), past = w <= ST.week;
+    const dots = ps.map(p => `<i class="dot ${dotClass(p, past)}"></i>`).join('');
+    h += `<button class="wk${past?' past':''}${w===lw?' now':''}${w===state.week?' sel':''}" data-w="${w}" aria-pressed="${w===state.week}" aria-label="الأسبوع ${ar(w)}: ${ar(ps.length)} برامج">
+      <span class="stack">${dots}</span><span class="cnt num">${ar(ps.length)}</span><span class="n num">${ar(w)}</span>
+      ${w===lw?'<span class="here">هذا الأسبوع</span>':''}</button>`;
+  }
+  const prog = (Math.min(lw ?? ST.week, N) - 1) / (N - 1);
+  $('weeks').innerHTML = h + `<span class="prog-line" style="width:calc((100% - 48px) * ${prog})"></span>`;
+  const w = state.week ?? lw ?? ST.week, ps = weekProgs(w), past = w <= ST.week;
+  $('weekpick').innerHTML = `<div class="j-foot"><h3>برامج الأسبوع ${ar(w)}${w===lw?' · الأسبوع الحالي':''}</h3><span class="key">اختر أسبوعاً من الرحلة لعرض برامجه</span></div>
+    <div class="chips">${ps.map(p => `<button class="chip" data-p="${p.id}"><i class="dot ${dotClass(p, past)}"></i>${esc(p.name)}</button>`).join('') || '<span class="key">لا برامج مجدولة</span>'}</div>`;
+}
+
+function renderDomains(){
+  const doms = [...new Set(PLAN.standards.map(s => s.domain))];
+  $('domains').innerHTML = doms.map((d, di) => {
+    const ss = PLAN.standards.map((s,i) => ({...s,i})).filter(s => s.domain === d);
+    const ids = [...new Set(ss.flatMap(s => s.programs))], dn = ids.filter(isDoc).length;
+    return `<div class="dom"><div class="dom-h"><div><span class="eyebrow">المجال ${['الأول','الثاني','الثالث','الرابع'][di]}</span><h3>${esc(d)}</h3></div>
+        <div class="big num">${ar(Math.round(dn/ids.length*100))}٪</div></div>
+      ${ss.map(s => { const n = s.programs.filter(isDoc).length;
+        return `<button class="std" data-s="${s.i}" aria-pressed="${state.std===s.i}">
+          <span class="row"><span>${esc(s.name)}</span><small class="num">${ar(n)} من ${ar(s.programs.length)}</small></span>
+          <span class="dots">${s.programs.map(id => `<i class="dot ${isDoc(id)?'on':'off'}" title="${esc(PLAN.programs[id-1].name)}"></i>`).join('')}</span></button>`; }).join('')}</div>`;
+  }).join('');
+}
+
+function filtered(){
+  const q = state.q.trim();
+  return PLAN.programs.filter(p =>
+    (state.grade === 0 || p.grades.includes(state.grade) || p.aud.includes('parents')) &&
+    (state.aud === 'all' || p.aud.includes(state.aud)) &&
+    (state.std === null || p.standards.includes(state.std)) &&
+    (!q || (p.name + p.brief + p.objective + p.goal).includes(q)));
+}
+function renderGrid(){
+  const ps = filtered();
+  $('count').textContent = `${ar(ps.length)} برنامجاً من ${ar(PLAN.programs.length)}`;
+  const act = [];
+  if (state.std !== null) act.push(`<button data-clear="std">المعيار: ${esc(PLAN.standards[state.std].name)} ×</button>`);
+  if (state.grade) act.push(`<button data-clear="grade">الصف ${GR[state.grade]} ×</button>`);
+  if (state.aud !== 'all') act.push(`<button data-clear="aud">${AUD[state.aud]} ×</button>`);
+  if (state.q) act.push(`<button data-clear="q">«${esc(state.q)}» ×</button>`);
+  $('active').innerHTML = act.length ? '<span>معروض حسب:</span>' + act.join('') : '';
+  $('grid').innerHTML = ps.map(p => { const s = status(p);
+    return `<button class="card ${s.k}" data-p="${p.id}">
+      <span class="top"><span class="badge num">${ar(p.id)}</span><h3>${esc(p.name)}</h3></span>
+      <p>${esc(p.brief)}</p>
+      <span class="foot"><span class="pill ${s.k}">${s.t}</span>${p.grades.length?`<span class="tag">${gradesTxt(p.grades)}</span>`:`<span class="tag">${AUD[p.aud[0]]}</span>`}<span class="more">التفاصيل ←</span></span>
+    </button>`; }).join('') || '<div class="empty">لا توجد برامج تطابق اختيارك. أزل أحد المرشّحات أعلاه.</div>';
+}
+
+const PICON = {
+  10:'<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',
+  12:'<path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h8"/>',
+  13:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 3-5.5 6-5.5s6 2 6 5.5M15 15c3 0 6 1.5 6 4.5"/>',
+  20:'<path d="M3 9l9-5 9 5-9 5z"/><path d="M7 11.5V16c0 1.5 2.5 3 5 3s5-1.5 5-3v-4.5"/>',
+  21:'<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>'
+};
+function renderParents(){
+  $('parents').innerHTML = PLAN.programs.filter(p => p.aud.includes('parents')).map(p =>
+    `<button class="pcard" data-p="${p.id}"><span class="ic"><svg viewBox="0 0 24 24">${PICON[p.id] || PICON[13]}</svg></span>
+      <h3>${esc(p.name)}</h3><p>${esc(p.indicator)}</p><span class="when">${esc(p.time)}</span></button>`).join('')
+    + `<div class="pcard voice"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+      <h3>رأيك يقيس أثرنا</h3><p>استبانة الأسرة من أدوات التقويم المدرسي، ومشاركتك فيها تعيننا على قياس أثر البرامج وتحسينها.</p><span class="when">عند وصول الاستبانة إليكم</span></div>`;
+}
+
+function renderImpact(){
+  if (!IMP) return;
+  $('impact-sec').hidden = false;
+  $('impact-asof').textContent = `من ${IMP.source}، ${IMP.asOf}. أرقام مجمّعة دون أسماء.`;
+  $('impact').innerHTML = IMP.cards.map((c, i) => `<div class="ic-card${i===0?' feat':''}">
+      <span class="area">${esc(c.area)}</span><span class="big num">${esc(c.big)}</span><p>${esc(c.text)}</p><span class="ev">الدليل: ${esc(c.evidence)}</span></div>`).join('');
+  $('t-rows').innerHTML = IMP.targets.map(t => `<button class="t-row" data-p="${t.id}">
+      <span><b>${esc(t.name)}</b><small>${esc(t.label)}</small></span>
+      <span class="t-track" role="img" aria-label="المستهدف ${ar(t.target)}٪ والمتحقق ${ar(t.achieved)}٪"><i class="f" style="width:${t.achieved}%"></i><i class="tg" style="inset-inline-start:${t.target}%"><span>المستهدف ${ar(t.target)}٪</span></i></span>
+      <span class="t-val num">${ar(t.achieved)}٪ <small>متحقق</small></span></button>`).join('');
+  $('t-miles').innerHTML = IMP.milestones.map(m => `<button class="mile" data-p="${m.id}"><span class="ok">✓</span><b>${esc(m.name)}</b><small>${esc(m.label)}</small></button>`).join('');
+}
+
+function openProgram(id){
+  const p = PLAN.programs.find(x => x.id === +id); if (!p) return;
+  const s = status(p), lw = liveWeek(), evn = (ST.evidenceByProgram || {})[p.id];
+  $('dlg-n').textContent = ar(p.id);
+  $('dlg-id').textContent = `البرنامج ${ar(p.id)} · الهدف ${p.code}`;
+  $('dlg-title').textContent = p.name;
+  const tl = sem => { let h = ''; for (let w = 1; w <= 13; w++){ const on = p.weeks.some(x => x[0]===sem && x[1]===w);
+    const done = on && isDoc(p.id) && (sem < ST.semester || (sem === ST.semester && w <= ST.week));
+    h += `<i class="${on?'on':''}${done?' past':''}${sem===1 && w===lw?' now':''}" title="الأسبوع ${ar(w)}"></i>`; } return h; };
+  const rows = [
+    ['الحالة', `<span class="pill ${s.k}">${s.t}</span>` + (evn ? ` <span class="num" style="font-size:13px;color:var(--ink-2)">· ${ar(evn)} شواهد موثَّقة</span>` : '')],
+    ['الهدف العام', esc(p.goal)], ['الهدف التفصيلي', esc(p.objective)],
+    ['المستهدفون', esc(p.target) + (p.count ? ` (${esc(p.count)})` : '')], ['أسلوب التنفيذ', esc(p.method)],
+    ['زمن التنفيذ', esc(p.time)], ['مؤشر الإنجاز', esc(p.indicator)], ['الشواهد', esc(p.evidence)],
+    ['المسؤول', esc(p.owner)], ['معايير التقويم', p.standards.map(i => esc(PLAN.standards[i].name)).join(' · ')]];
+  const prog = IMP && IMP.progress && IMP.progress[p.id];
+  if (prog) rows.splice(7, 0, ['الأثر حتى الآن', `<b style="color:var(--green)">${esc(prog)}</b>`]);
+  $('dlg-b').innerHTML = `<p>${esc(p.brief)}</p>
+    <div class="kv">${rows.map(r => `<div class="k">${r[0]}</div><div>${r[1]}</div>`).join('')}</div>
+    <div><div class="tl-t">مواعيده في الفصل الأول</div><div class="tl">${tl(1)}</div><div class="tl-l"><span>الأسبوع ١</span><span>الأسبوع ١٣</span></div></div>
+    <div><div class="tl-t">مواعيده في الفصل الثاني</div><div class="tl">${tl(2)}</div><div class="tl-l"><span>الأسبوع ١</span><span>الأسبوع ١٣</span></div></div>`;
+  const d = $('dlg'); if (d.showModal) d.showModal(); else d.setAttribute('open', '');
+}
+
+function syncPick(){
+  document.querySelectorAll('#grades .grade').forEach(b => b.setAttribute('aria-pressed', +b.dataset.g === state.grade));
+  document.querySelectorAll('#seg-aud button').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === state.aud));
+}
+function bind(){
+  document.addEventListener('click', e => {
+    const t = e.target.closest('[data-p],[data-w],[data-s],[data-clear],[data-g],#seg-aud button');
+    if (!t) return;
+    if (t.dataset.p){ openProgram(t.dataset.p); return; }
+    if (t.dataset.w){ state.week = +t.dataset.w; renderWeeks(); return; }
+    if (t.dataset.s !== undefined){ const i = +t.dataset.s; state.std = state.std === i ? null : i; renderDomains(); renderGrid(); $('h-prog').scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'start'}); return; }
+    if (t.dataset.clear){ const k = t.dataset.clear; if (k==='std') state.std = null; if (k==='grade') state.grade = 0; if (k==='aud') state.aud = 'all'; if (k==='q'){ state.q = ''; $('q').value = ''; } }
+    else if (t.dataset.g !== undefined){ state.grade = +t.dataset.g; try { localStorage.setItem('moe-plan-grade', state.grade); } catch(_){} }
+    else state.aud = t.dataset.v;
+    syncPick(); renderDomains(); renderGrid();
+  });
+  $('q').addEventListener('input', e => { state.q = e.target.value; renderGrid(); });
+  $('dlg-x').addEventListener('click', () => $('dlg').close());
+  $('dlg').addEventListener('click', e => { if (e.target === $('dlg')) $('dlg').close(); });
+  let t; addEventListener('resize', () => { clearTimeout(t); t = setTimeout(paintDots, 150); });
+}
+
+Promise.all([fetch('plan.json').then(r => r.json()), fetch('status.json', {cache:'no-store'}).then(r => r.json()),
+              fetch('impact.json', {cache:'no-store'}).then(r => r.ok ? r.json() : null).catch(() => null)])
+  .then(([plan, st, imp]) => {
+    PLAN = plan; ST = st; IMP = imp;
+    try { const g = +localStorage.getItem('moe-plan-grade'); if (g >= 0 && g <= 3) state.grade = g; } catch(_){}
+    $('source').textContent = `آخر تحديث ${st.updatedHijri}، ببيانات حتى الأسبوع ${ar(st.week)}. تُحدَّث أسبوعياً بعد مراجعة شواهد الخطة، وتُعرض البرامج والمعايير كما وردت في الخطة التشغيلية المعتمدة.`;
+    syncPick(); bind(); renderHero(); renderWeeks(); renderDomains(); renderGrid(); renderParents(); renderImpact(); paintDots();
+    const sc = document.querySelector('.j-scroll'), nw = document.querySelector('.wk.now');
+    if (sc && nw && sc.scrollWidth > sc.clientWidth)   // توسيط الأسبوع الحالي في شريط الرحلة على الجوال
+      sc.scrollLeft = Math.min(0, nw.offsetLeft + nw.offsetWidth/2 - sc.clientWidth/2 - (sc.scrollWidth - sc.clientWidth));
+  })
+  .catch(() => { $('grid').innerHTML = '<div class="empty">تعذّر تحميل بيانات اللوحة. حدّث الصفحة بعد قليل.</div>'; });
+})();
+</script>
+
+</body>
+</html>
